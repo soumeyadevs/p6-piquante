@@ -27,13 +27,13 @@ app.use((req, res, next) => {
 });
 
 app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
+
+//Pour gérer la requête POST venant de l'application front-end
 app.use(express.json());
 
 /* Middleware */
-app.use('/images', express.static(path.join(__dirname, 'images')));
-
-
-
+app.use('/images', express.static(path.join(__dirname, '/images')));
 app.use('/api/auth', userRoutes);
 app.use('/api/sauces', sauceRoutes);
 
