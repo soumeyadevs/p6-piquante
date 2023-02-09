@@ -34,7 +34,7 @@ Ajoutez un dossier /images .
 
 Ajoutez le fichier d’environnement .env et ajoutez les variables pour mongodb : 
 
-HOST="cluster0.waw8qyr.mongodb.net" 
+HOST="votre cluster" 
 
 LOGIN="votre nom d’utilisateur" 
 
